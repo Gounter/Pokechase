@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Pokedex {
     List<Pokemon> pokedex;
-    Pokedex(){
+    public Pokedex(){
         pokedex = new ArrayList<>(151);
     }
 

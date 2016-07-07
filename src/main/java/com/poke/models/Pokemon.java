@@ -7,6 +7,15 @@ public class Pokemon {
     private String name;
     private int number;
 
+    public Pokemon(){
+
+    }
+
+    public Pokemon(int number, String name){
+        this.number=number;
+        this.name=name;
+    }
+
     public int getNumber() {
         return number;
     }
@@ -21,5 +30,10 @@ public class Pokemon {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name + " #" + number;
     }
 }
