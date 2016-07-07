@@ -80,7 +80,7 @@ INSERT INTO pokemon(number,name) VALUES (79,'Slowpoke');
 INSERT INTO pokemon(number,name) VALUES (80,'Slowbro');
 INSERT INTO pokemon(number,name) VALUES (81,'Magnemite');
 INSERT INTO pokemon(number,name) VALUES (82,'Magneton');
-INSERT INTO pokemon(number,name) VALUES (83,'Farfetch\'d');
+INSERT INTO pokemon(number,name) VALUES (83,'Farfetch''d');
 INSERT INTO pokemon(number,name) VALUES (84,'Doduo');
 INSERT INTO pokemon(number,name) VALUES (85,'Dodrio');
 INSERT INTO pokemon(number,name) VALUES (86,'Seel');
