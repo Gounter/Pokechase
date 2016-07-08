@@ -14,6 +14,9 @@ public class ApplicationController {
     public String index(Model model){return "index";}
     @RequestMapping("/home")
     public String home(Model model){return "views/home";}
-    @RequestMapping("map")
+    @RequestMapping("/pokedex")
+    public String pokedex(Model model){return "views/pokedex";}
+    @RequestMapping("/map")
     public String map(Model model){return "views/map";}
+
 }

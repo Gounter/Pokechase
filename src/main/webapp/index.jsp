@@ -40,7 +40,7 @@
     <ul>
         <li><a onclick="getHome()"> Home </a></li>
         <li><a onclick="getMap()"> Map </a></li>
-        <li><a href=""> Pokedex </a></li>
+        <li><a onclick="getPokedex()"> Pokedex </a></li>
     </ul>
 </div>
 <div id="mainContainer">
