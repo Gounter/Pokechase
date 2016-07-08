@@ -1,5 +1,8 @@
 package com.poke.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 /**
  * Created by deasel on 2016-07-06.
  */
@@ -7,13 +10,11 @@ public class Pokemon {
     private String name;
     private int number;
 
-    public Pokemon(){
+    private final JdbcTemplate jdbcTemplate;
 
-    }
-
-    public Pokemon(int number, String name){
-        this.number=number;
-        this.name=name;
+    @Autowired
+    public Pokemon(JdbcTemplate jdbcTemplate){
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     public int getNumber() {
