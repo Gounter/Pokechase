@@ -16,9 +16,6 @@ import java.util.Map;
 @Component
 public class PokemonRepository {
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
     private static final String INSERT_STMT =
             "insert into pokemon (number,name)"
             + "values(?,?)"
@@ -31,23 +28,7 @@ public class PokemonRepository {
 
     private static final String SELECT_STMT =
             "SELECT number, name FROM pokemon"
-            + "WHERE number = ?"
-            ;
+            + "WHERE number = ?";
 
-    public void truncate(){
-        jdbcTemplate.execute("ALTER SEQUENCE pokemon_id_seq RESTART WITH 1;");
-        jdbcTemplate.execute("TRUNCATE TABLE BIXI;");
-    }
-
-    public Pokedex fillPokedex(){
-        Pokedex pokedex= new Pokedex();
-        List<Map<String,Object>> pokemons = jdbcTemplate.queryForList(SELECTALL_STMT);
-        for (Map pokemon:pokemons) {
-            Pokemon newPokemon = new Pokemon();
-            newPokemon.setName((String)(pokemon.get("name")));
-            newPokemon.setNumber((int)(pokemon.get("number")));
-            pokedex.addNewPokemon(newPokemon);
-        }
-    }
 }
 
