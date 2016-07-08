@@ -1,27 +1,34 @@
 package com.poke.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
 /**
  * Created by deasel on 2016-07-06.
  */
+
+@Component
 public class PokemonLocation {
     private double latitude;
     private double longitude;
     private Pokemon pokemon;
 
-    public PokemonLocation(){
+    private final JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public PokemonLocation(JdbcTemplate jdbcTemplate){
+        this.jdbcTemplate = jdbcTemplate;
     }
 
-    public PokemonLocation(double latitude, double longitude, Pokemon pokemon){
+    @Autowired
+    public PokemonLocation(double latitude, double longitude, Pokemon pokemon,JdbcTemplate jdbcTemplate){
         this.latitude = latitude;
         this.longitude = longitude;
         this.pokemon = pokemon;
+        this.jdbcTemplate = jdbcTemplate;
     }
 
-    public PokemonLocation (double latitude, double longitude, String pokemon){
-        this.latitude = latitude;
-        this.longitude = longitude;
-
-    }
 
     public double getLatitude() {
         return latitude;
