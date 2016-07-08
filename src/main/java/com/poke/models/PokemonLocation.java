@@ -21,15 +21,6 @@ public class PokemonLocation {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    @Autowired
-    public PokemonLocation(double latitude, double longitude, Pokemon pokemon,JdbcTemplate jdbcTemplate){
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.pokemon = pokemon;
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
-
     public double getLatitude() {
         return latitude;
     }
