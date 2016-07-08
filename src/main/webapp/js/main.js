@@ -5,7 +5,6 @@
 function getPokedex(){
     getHtml('pokedex', function(){
         document.getElementById("mainContainer").innerHTML=arguments[0];
-        console.log(arguments[0]);
     })
 }
 
