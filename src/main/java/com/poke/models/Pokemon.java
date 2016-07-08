@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class Pokemon {
     private String name;
     private int number;
-
+//
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
