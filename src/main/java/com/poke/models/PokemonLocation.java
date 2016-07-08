@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
  * Created by deasel on 2016-07-06.
  */
 
-@Component
 public class PokemonLocation {
     private double latitude;
     private double longitude;
