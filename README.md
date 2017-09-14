@@ -1,6 +1,6 @@
 App Engine Java Pokechase website
 
-## Pokechase website for use with App Engine Java.
+## Pokechase website for use with App Engine Java
 
 Requires [Apache Maven](http://maven.apache.org) 3.0 or greater, and JDK 6+ in order to run.
 
